@@ -1,42 +1,38 @@
 const main = require('./index');
 
-test('name attr is found', ()=>{
-  expect(main().name).toBeDefined(); 
+test('computer_brand attr is found', ()=>{
+  expect(main().computer_brand).toBeDefined(); 
 });
 
-test('age attr is found', ()=>{
-  expect(main().age).toBeDefined(); 
+test('is_windows attr is found', ()=>{
+  expect(main().is_windows).toBeDefined(); 
 });
 
-test('gender attr is found', ()=>{
-  expect(main().gender).toBeDefined(); 
+test('materials array is found', ()=>{
+  expect(Array.isArray(main().materials)).toBeTruthy(); 
 });
 
-test('colors array is found', ()=>{
-  expect(Array.isArray(main().colors)).toBeTruthy(); 
+test('materials array has at least 2 elements', ()=>{
+  expect(main().materials.length).toBeGreaterThanOrEqual(2); 
 });
 
-test('colors array has at least 3 elements', ()=>{
-  expect(main().colors.length).toBeGreaterThanOrEqual(3); 
+test('os_info attr is found', ()=>{
+  expect(main().os_info).toBeDefined(); 
 });
 
-test('address attr is found', ()=>{
-  expect(main().address).toBeDefined(); 
+test('os_info attr has kernel_version attr', ()=>{
+  expect(main().os_info.kernel_version).toBeDefined(); 
 });
 
-test('address attr has streer attr', ()=>{
-  expect(main().address.street).toBeDefined(); 
+test('apps_installed array is found', ()=>{
+  expect(Array.isArray(main().apps_installed)).toBeTruthy();    
 });
 
-test('classes array is found', ()=>{
-  expect(Array.isArray(main().classes)).toBeTruthy();    
+test('apps_installed array has at least 2 elements', ()=>{
+  expect(main().apps_installed.length).toBeGreaterThanOrEqual(2); 
 });
 
-test('classes array has at least 2 elements', ()=>{
-  expect(main().classes.length).toBeGreaterThanOrEqual(2); 
-});
-
-test('classes array has two object with name attr', ()=>{
-  expect(main().classes[0].name).toBeDefined(); 
-  expect(main().classes[1].name).toBeDefined(); 
+test('apps_installed array has two object with name attr', ()=>{
+  expect(main().apps_installed[0].name).toBeDefined(); 
+  expect(main().apps_installed[1].name).toBeDefined(); 
 });
