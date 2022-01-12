@@ -1,0 +1,14 @@
+{
+  "name": "node-asignment-template",
+  "version": "1.0.0",
+  "description": "This template will be used to generate further asignments for the web platform course at the UPA",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "MACS-KINCAID",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^27.4.7"
+  }
+}
